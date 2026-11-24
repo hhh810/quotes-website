@@ -1,0 +1,327 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #111;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+header h1 {
+  color: #ffcc00;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+header p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+nav {
+  background: #191919;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 18px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#home {
+  background: linear-gradient(135deg, #111, #302400);
+  padding: 90px 20px;
+}
+
+#home h2 {
+  color: #ffcc00;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#home p {
+  color: #ddd;
+  font-size: 17px;
+}
+
+section h2 {
+  color: #ffcc00;
+  margin-bottom: 25px;
+}
+
+#about {
+  background: #111;
+}
+
+#about p {
+  color: #bbb;
+  line-height: 1.8;
+}
+
+footer {
+  background: #050505;
+  text-align: center;
+  padding: 25px;
+  color: #888;
+}
+
+/* BIG QUOTE CARDS */
+
+#quotes {
+  padding: 50px 15px;
+}
+
+.quote-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 750px;
+  margin: auto;
+}
+
+.quote-card {
+  background: linear-gradient(145deg, #171717, #080808);
+  border: 1px solid #444;
+  border-radius: 20px;
+  padding: 45px 25px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 25px #000;
+  transition: 0.4s;
+}
+
+.quote-card:hover {
+  transform: scale(1.03);
+  border-color: #ffcc00;
+  box-shadow: 0 0 25px #ffcc0044;
+}
+
+.quote-card p {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: white;
+}
+
+.quote-card span {
+  font-size: 17px;
+  color: #ffcc00;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .quote-card {
+    padding: 35px 18px;
+  }
+
+  .quote-card p {
+    font-size: 22px;
+  }
+}
+
+/* SEARCH BAR */
+
+#searchInput {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  padding: 18px;
+  border: 2px solid #444;
+  border-radius: 30px;
+  background: #171717;
+  color: white;
+  font-size: 17px;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #ffcc00;
+}
+
+/* CATEGORY BUTTONS */
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filters button,
+#randomBtn {
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+  padding: 13px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #ffcc00;
+  color: black;
+  border-color: #ffcc00;
+}
+
+#randomBtn {
+  display: block;
+  margin: 0 auto 35px;
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+#randomBtn:hover {
+  transform: scale(1.05);
+}
+
+/* QUOTE ACTIONS */
+
+.quote-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.quote-actions button {
+  background: #252525;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.quote-actions button:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+/* LIGHT MODE */
+
+body.light {
+  background: #f4f4f4;
+  color: #111;
+}
+
+body.light header,
+body.light nav,
+body.light #about {
+  background: #ffffff;
+}
+
+body.light nav a {
+  color: #111;
+}
+
+body.light .quote-card {
+  background: #ffffff;
+  border-color: #ddd;
+}
+
+body.light .quote-card p {
+  color: #111;
+}
+
+body.light #searchInput {
+  background: white;
+  color: black;
+  border-color: #ccc;
+}
+
+body.light .quote-actions button {
+  background: #eee;
+  color: #111;
+}
+
+#themeBtn {
+  display: block;
+  margin: 15px auto;
+  padding: 14px 25px;
+  border-radius: 25px;
+  background: #ffcc00;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* DAILY QUOTE */
+#dailyQuote {
+  width: 100%;
+  margin: 25px auto;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #263b5c, #111827);
+  border: 1px solid #ffcc00;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#dailyQuote h3 {
+  color: #ffcc00;
+  font-size: 21px;
+  margin-bottom: 18px;
+}
+
+#dailyQuoteText {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+body.light #dailyQuote {
+  background: #ffffff;
+}
+
+body.light #dailyQuoteText {
+  color: #111827;
+}
+.quote-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: block;
+}

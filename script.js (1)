@@ -1,0 +1,245 @@
+
+const quotes = [
+  { text: "Believe in yourself and your dreams.", category: "Life" },
+  { text: "Every day is a new beginning.", category: "Life" },
+  { text: "Never give up on what matters to you.", category: "Success" },
+  { text: "Your future is created by what you do today.", category: "Success" },
+  { text: "Knowledge is the key to wisdom.", category: "Wisdom" },
+  { text: "Be kind even when nobody is watching.", category: "Life" },
+  { text: "Family is where life begins and love never ends.", category: "Family" },
+  { text: "True love is built on trust and respect.", category: "Love" },
+  { text: "Actions speak louder than words.", category: "Wisdom" },
+  { text: "Patience makes difficult journeys easier.", category: "Life" },
+  { text: "Dream big and work hard.", category: "Success" },
+  { text: "A grateful heart finds happiness.", category: "Life" },
+  { text: "Respect is earned through actions.", category: "Wisdom" },
+  { text: "Never stop learning.", category: "Wisdom" },
+  { text: "Your attitude determines your direction.", category: "Success" },
+  { text: "Small steps lead to big achievements.", category: "Success" },
+  { text: "True friends bring peace into your life.", category: "Friendship" },
+  { text: "Trust takes years to build.", category: "Trust" },
+  { text: "Faith gives hope in difficult times.", category: "Faith" },
+  { text: "Choose happiness over unnecessary worries.", category: "Life" },
+  { text: "Success begins with a decision.", category: "Success" },
+  { text: "Be the reason someone smiles today.", category: "Life" },
+  { text: "Honesty is the foundation of trust.", category: "Trust" },
+  { text: "Love grows through kindness.", category: "Love" },
+  { text: "Family makes ordinary moments special.", category: "Family" },
+  { text: "Wisdom comes from experience.", category: "Wisdom" },
+  { text: "Your mistakes are lessons, not your identity.", category: "Life" },
+  { text: "Never compare your journey with others.", category: "Life" },
+  { text: "Hard work creates opportunities.", category: "Success" },
+  { text: "A true friend supports your growth.", category: "Friendship" },
+  { text: "Keep your promises.", category: "Trust" },
+  { text: "Hope makes tomorrow brighter.", category: "Faith" },
+  { text: "Be humble in victory.", category: "Wisdom" },
+  { text: "Kindness costs nothing.", category: "Life" },
+  { text: "Your dreams deserve your effort.", category: "Success" },
+  { text: "Listen more and speak wisely.", category: "Wisdom" },
+  { text: "Love is shown through actions.", category: "Love" },
+  { text: "Family is a precious gift.", category: "Family" },
+  { text: "Good friends are a blessing.", category: "Friendship" },
+  { text: "Trust yourself to keep growing.", category: "Trust" },
+  { text: "Stay hopeful through every season.", category: "Faith" },
+  { text: "Time is more valuable than money.", category: "Wisdom" },
+  { text: "Be proud of your progress.", category: "Success" },
+  { text: "A peaceful mind is a powerful mind.", category: "Life" },
+  { text: "Forgiveness creates room for peace.", category: "Life" },
+  { text: "Respect everyone.", category: "Wisdom" },
+  { text: "Great things take time.", category: "Success" },
+  { text: "Love makes life meaningful.", category: "Love" },
+  { text: "Never forget those who support you.", category: "Family" },
+  { text: "Real friendship is built on honesty.", category: "Friendship" },
+  { text: "Be someone people can rely on.", category: "Trust" },
+  { text: "Keep believing in better days.", category: "Faith" },
+  { text: "Learn from yesterday and live today.", category: "Life" },
+  { text: "Discipline turns dreams into plans.", category: "Success" },
+  { text: "Think before you speak.", category: "Wisdom" },
+  { text: "Give love without expecting rewards.", category: "Love" },
+  { text: "Family support makes us stronger.", category: "Family" },
+  { text: "A loyal friend is priceless.", category: "Friendship" },
+  { text: "Trust is built one action at a time.", category: "Trust" },
+  { text: "Have faith in your journey.", category: "Faith" },
+  { text: "Every challenge teaches something.", category: "Life" },
+  { text: "Focus on progress, not perfection.", category: "Success" },
+  { text: "Wisdom begins with curiosity.", category: "Wisdom" },
+  { text: "Care is the language of love.", category: "Love" },
+  { text: "Make time for your family.", category: "Family" },
+  { text: "Friendship makes hard days lighter.", category: "Friendship" },
+  { text: "Be honest even when it is difficult.", category: "Trust" },
+  { text: "Let hope guide your decisions.", category: "Faith" },
+  { text: "Your story is still being written.", category: "Life" },
+  { text: "Consistency is stronger than excuses.", category: "Success" },
+  { text: "A wise person keeps learning.", category: "Wisdom" },
+  { text: "Love requires patience.", category: "Love" },
+  { text: "Cherish the people who care for you.", category: "Family" },
+  { text: "Good friends celebrate your success.", category: "Friendship" },
+  { text: "Be dependable and truthful.", category: "Trust" },
+  { text: "Stay strong and keep hope alive.", category: "Faith" },
+  { text: "Life is a journey of learning.", category: "Life" },
+  { text: "Prepare today for a better tomorrow.", category: "Success" },
+  { text: "Silence can be a wise answer.", category: "Wisdom" },
+  { text: "Love begins with respect.", category: "Love" },
+  { text: "Family memories last forever.", category: "Family" },
+  { text: "Choose friends who encourage good choices.", category: "Friendship" },
+  { text: "Truth builds lasting relationships.", category: "Trust" },
+  { text: "Never lose hope.", category: "Faith" },
+  { text: "Be patient with yourself.", category: "Life" },
+  { text: "Work hard and stay focused.", category: "Success" },
+  { text: "Knowledge grows when shared.", category: "Wisdom" },
+  { text: "Kind words can change a day.", category: "Love" },
+  { text: "Support your family whenever you can.", category: "Family" },
+  { text: "A real friend tells you the truth kindly.", category: "Friendship" },
+  { text: "Keep your word.", category: "Trust" },
+  { text: "Believe that good things are possible.", category: "Faith" },
+  { text: "Be thankful for every lesson.", category: "Life" },
+  { text: "Success needs patience and effort.", category: "Success" },
+  { text: "Think clearly before making decisions.", category: "Wisdom" },
+  { text: "Love is stronger when shared.", category: "Love" },
+  { text: "Family is a source of strength.", category: "Family" },
+  { text: "Stand by your true friends.", category: "Friendship" },
+  { text: "Trust grows through consistency.", category: "Trust" },
+  { text: "Let faith give you courage.", category: "Faith" },
+  { text: "Make every moment count.", category: "Life" },
+  { text: "Your effort today matters tomorrow.", category: "Success" }
+];
+
+let activeCategory = "All";
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+const quoteContainer = document.getElementById("quoteContainer");
+const searchInput = document.getElementById("searchInput");
+const randomBtn = document.getElementById("randomBtn");
+
+function renderQuotes() {
+  if (!quoteContainer) return;
+
+  const search = searchInput ? searchInput.value.toLowerCase() : "";
+
+  const filtered = quotes.filter((quote, index) => {
+    const matchesCategory =
+      activeCategory === "All" ||
+      (activeCategory === "Favorites"
+        ? favorites.includes(index)
+        : quote.category === activeCategory);
+
+    const matchesSearch =
+      quote.text.toLowerCase().includes(search);
+
+    return matchesCategory && matchesSearch;
+  });
+
+  quoteContainer.innerHTML = "";
+
+  filtered.forEach((quote) => {
+    const index = quotes.indexOf(quote);
+    const card = document.createElement("div");
+    card.className = "quote-card";
+
+    card.innerHTML = `
+  <img
+    src="https://picsum.photos/seed/lifewisdom${index}/800/450"
+    alt="Life Wisdom"
+    class="quote-image"
+  >
+
+  <p>“${quote.text}”</p>
+  <small>${quote.category}</small>
+
+  <div class="quote-actions">
+    <button class="favorite-btn">
+      ${favorites.includes(index) ? "❤️ Saved" : "🤍 Favorite"}
+    </button>
+    <button class="copy-btn">📋 Copy</button>
+    <button class="share-btn">📤 Share</button>
+  </div>
+`;
+
+    card.querySelector(".favorite-btn").addEventListener("click", () => {
+      if (favorites.includes(index)) {
+        favorites = favorites.filter(item => item !== index);
+      } else {
+        favorites.push(index);
+      }
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+      renderQuotes();
+    });
+
+    card.querySelector(".copy-btn").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(quote.text);
+      alert("Quote copied!");
+    });
+
+    card.querySelector(".share-btn").addEventListener("click", async () => {
+      if (navigator.share) {
+        await navigator.share({ text: quote.text });
+      } else {
+        await navigator.clipboard.writeText(quote.text);
+        alert("Quote copied! You can share it.");
+      }
+    });
+
+    quoteContainer.appendChild(card);
+  });
+
+  if (filtered.length === 0) {
+    quoteContainer.innerHTML = "<p>No quotes found.</p>";
+  }
+}
+
+document.querySelectorAll(".filters button").forEach(button => {
+  button.addEventListener("click", () => {
+    activeCategory = button.dataset.category;
+    document.querySelectorAll(".filters button").forEach(btn => {
+      btn.classList.remove("active");
+    });
+    button.classList.add("active");
+    renderQuotes();
+  });
+});
+
+if (searchInput) {
+  searchInput.addEventListener("input", renderQuotes);
+}
+
+if (randomBtn) {
+  randomBtn.addEventListener("click", () => {
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+    alert(random.text);
+  });
+}
+
+renderQuotes();
+
+const themeBtn = document.getElementById("themeBtn");
+
+if (themeBtn) {
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light");
+    themeBtn.textContent = "🌙 Dark Mode";
+  }
+
+  themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+    const isLight = document.body.classList.contains("light");
+    themeBtn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  });
+}
+
+const dailyQuoteText = document.getElementById("dailyQuoteText");
+
+function showDailyQuote() {
+  const today = new Date();
+  const dayNumber = Math.floor(
+    (today - new Date(today.getFullYear(), 0, 0)) / 86400000
+  );
+
+  const quoteIndex = dayNumber % quotes.length;
+
+  if (dailyQuoteText) {
+    dailyQuoteText.textContent = "“" + quotes[quoteIndex].text + "”";
+  }
+}
+
+showDailyQuote();
